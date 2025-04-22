@@ -1,10 +1,10 @@
 ## How to handle omics data 
 
-Data is either PROVIDER generated (from in-house tissue) or HOSPITAL generated (no tissue?).  
-It is crucial to have an associated metadata tracking table.
-A database (simple SQLite, manageable with Python) might be overkill for the beginning, but it would ensure that different users can access different kind of data and not erroneously modify or delete the data. There is overhead in maintaining it and make people know how to query. Best future-proof solution.
-A CSV is an easier solution fot the beginning but it seems to me a too big single point of failure.
-The goal is to register for each sample useful information to reconstruct WHERE, WHEN, WHO and other specifics for ANALYSIS (batch effect) or QC.
+Data is either PROVIDER generated (from in-house tissue) or HOSPITAL generated (no tissue?).   
+It is crucial to have an associated metadata tracking table.  
+A database (simple SQLite, manageable with Python) might be overkill for the beginning, but it would ensure that different users can access different kind of data and not erroneously modify or delete the data. There is overhead in maintaining it and make people know how to query. Best future-proof solution.  
+A CSV is an easier solution fot the beginning but it seems to me a too big single point of failure.  
+The goal is to register for each sample useful information to reconstruct WHERE, WHEN, WHO and other specifics for ANALYSIS (batch effect) or QC.  
 | SAMPLE_ID | SOURCE_PROVIDER | DATA_TYPE | PLATFORM | SEQUENCING RUN | PATIENT_ID | TISSUE_SPECIFICS | CREATION_DATE | PATIENT_SEX | OTHER_PATIENT_DATA ... |
 | --------- | ------- |------- |------- |------- |------- |------- |------- |------- |------- |
 | HG001  | HOSPITAL    | WGS | ILLUMINA NEXTSEQ | WGS001 | 1  |  COLON   |   25/12/2024  |   M  |  ...   |
